@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "PC1_HerreraLopez/1.0.0": {
+        "runtime": {
+          "PC1_HerreraLopez.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PC1_HerreraLopez/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

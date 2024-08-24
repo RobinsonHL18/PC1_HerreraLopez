@@ -1,0 +1,364 @@
+﻿@{
+    ViewData["Title"] = "Umbrella-Corp";
+}
+    <div class="home-container">
+    <section class="hero-section">
+        <div class="hero-carousel">
+            <div class="carousel-slide">
+                <img src="https://www.contramuro.com/wp-content/uploads/2024/08/que-es-un-fondo-de-inversion-.jpeg" alt="Inversión">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/media/image/2022/08/varias-graficas-pantalla-ordenador-2775347.jpg?tf=3840x" alt="Tecnología">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIM_AshckrLXIVh2t2ifzGSpVL7Rd3AlYh_paiXBUDsXmOVx3iHs6WWcH0upja95T71FU&usqp=CAU" alt="Futuro">
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        <div class="hero-content">
+            <h1>Bienvenido a Umbrela-Corp</h1>
+            <p>Transformando el futuro de las inversiones con innovación y experiencia.</p>
+            <a asp-controller="OperarBolsa" asp-action="Index" class="cta-button">Opera con Nosotros</a>
+        </div>
+    </section>
+
+        <section class="about-section">
+            <div class="content-wrapper">
+                <div class="image-container">
+                    <img src="https://img.freepik.com/vector-premium/bolsa-valores-linea_24640-28433.jpg" height="300px" alt="Umbrella-Corp">
+                </div>
+                <div class="text-container">
+                    <h2>¿Quiénes Somos?</h2>
+                    <p>Umbrela-Corp es una firma de inversiones líder que combina innovación y conocimiento para ofrecer soluciones financieras excepcionales. Nuestro equipo de expertos está comprometido a ayudarte a alcanzar tus metas financieras.</p>
+                    <a class="cta-link" asp-controller="Home" asp-action="Nosotros">Más sobre nosotros</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2>¿Por Qué Elegirnos?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuEtxGxf1WfGAEjY2BM7SKcfy_oqR9wjtdhq3gS9EaMdb5li9ucTMbopvP1jm4auDB0FA&usqp=CAU" height="100px" alt="Innovación">
+                    <h3>Innovación</h3>
+                    <p>Implementamos tecnología de vanguardia para maximizar tus rendimientos.</p>
+                </div>
+                <div class="feature">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyDZw8n6kBGs3j9CmlYQ8aI8Ss0VLIYkCw3Q&s" height="100px" alt="Experiencia">
+                    <h3>Experiencia</h3>
+                    <p>Años de experiencia en el mercado financiero global.</p>
+                </div>
+                <div class="feature">
+                    <img src="https://cdn-icons-png.flaticon.com/256/4371/4371076.png" height="100px" alt="Confianza">
+                    <h3>Confianza</h3>
+                    <p>Más de 20,000 clientes satisfechos en todas partes del mundo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="statistics-section">
+            <h2>Datos Clave</h2>
+            <div class="stats-grid">
+                <div class="stat">
+                    <h3 style="color: #ffffff;">+25 Años</h3>
+                    <p style="color: #ffffff;">De experiencia en el mercado.</p>
+                </div>
+                <div class="stat">
+                    <h3 style="color: #ffffff;">$10B+</h3>
+                    <p style="color: #ffffff;">En activos gestionados.</p>
+                </div>
+                <div class="stat">
+                    <h3 style="color: #ffffff;">70+</h3>
+                    <p style="color: #ffffff;">Premios a la excelencia.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section">
+        <h2>Lo Que Dicen Nuestros Clientes</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <p>"Umbrella Corp. cambió completamente mi perspectiva de inversión. El futuro es brillante con ellos."</p>
+                <h4>- Carlos Méndez</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Con Umbrella Corp., mis metas financieras se volvieron realidad más rápido de lo que imaginé."</p>
+                <h4>- Valeria Torres</h4>
+            </div>
+            <div class="testimonial">
+                <p>"La confianza y seguridad que brinda Umbrella Corp. no tiene comparación."</p>
+                <h4>- Juan Esteban</h4>
+            </div>
+        </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Empieza a Invertir Hoy</h2>
+            <p>Únete a Umbrella-Corp y da el primer paso hacia un futuro financiero seguro.</p>
+            <a href="mailto:tuemail@gmail.com" class="cta-button">Contáctanos</a>
+        </section>
+    </div>
+
+<script src="~/js/scripts.js"></script>
+<style>
+
+.home-container {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    padding: 40px 0px;
+    text-align: center;
+    color: white;
+}
+
+.hero-carousel {
+    display: flex;
+    width: 300%; 
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 33.33%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 10;
+}
+
+
+
+.hero-content h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.cta-button {
+    background: #000000;
+    color: white;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.cta-button:hover {
+    background: #000000;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.about-section {
+    padding: 80px 20px;
+    display: flex;
+    margin-top: 60px;
+    background: #e0f7fa;
+    border-radius: 8px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-container {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.text-container {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.text-container h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.cta-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #8f0c00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta-link:hover {
+    text-decoration: underline;
+}
+
+.features-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: #f1f8e9;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    flex: 1;
+    max-width: 30%;
+    margin-bottom: 20px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.feature img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #880303;
+}
+
+.statistics-section {
+    padding: 80px 20px;
+    background: #f0f4c3;
+    text-align: center;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.stat {
+    flex: 1;
+    max-width: 30%;
+    margin-bottom: 20px;
+    background: #0089e4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat h3 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.testimonials-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: #f5f5f5;
+}
+
+.testimonials-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    flex: 1;
+    max-width: 30%;
+    margin-bottom: 20px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+.testimonial h4 {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #333;
+}
+
+.cta-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: #444444;
+    color: white;
+}
+
+.cta-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+</style>
+
