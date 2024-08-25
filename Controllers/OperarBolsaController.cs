@@ -20,17 +20,20 @@ namespace PC1_HerreraLopez.Controllers
 
         public IActionResult Index()
         {
-            ViewData["listaOperaciones"] = new List<Operaciones>();
             return View();
         }
 
-        public IActionResult Operacion(Operaciones operaciones)
+        [HttpPost]
+        public IActionResult Operacion(Operaciones operacion)
         {
-            List<Operaciones> listaOperaciones = new List<Operaciones>();
-            operaciones.CalcularOperacion();
-            listaOperaciones.Add(operaciones);
-            ViewData["listaOperaciones"]=listaOperaciones;
+            if (operacion.Instrumentos == null || !operacion.Instrumentos.Any())
+            {
+                ModelState.AddModelError("", "Debe seleccionar al menos un instrumento.");
+                return View("Index", operacion);
+            }
 
+            operacion.CalcularOperacion();
+            ViewData["listaOperaciones"] = new List<Operaciones> { operacion };
             return View("Index");
         }
 

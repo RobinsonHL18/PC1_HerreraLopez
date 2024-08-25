@@ -19,8 +19,20 @@ namespace PC1_HerreraLopez.Models
 
         public void CalcularOperacion()
         {
-            IGV = MontoAbonar * 0.18M;
-            Comision = MontoAbonar > 300 ? 1 : 3;
+            IGV = 0M;
+            foreach (var instrumento in Instrumentos)
+            {
+                decimal montoInstrumento = instrumento switch
+                {
+                    "SP500" => 500M,
+                    "DowJones" => 300M,
+                    "BonosUS" => 120M,
+                    _ => 0M
+                };
+                IGV += montoInstrumento * 0.18M;
+            }
+
+            Comision = MontoAbonar > 300 ? 3M : 1M;
             Total = MontoAbonar + IGV + Comision;
         }
     }

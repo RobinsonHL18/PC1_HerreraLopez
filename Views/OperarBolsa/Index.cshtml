@@ -58,20 +58,20 @@
         </div>
     </div>
     
-    <div class="mt-5">
-        <h2 class="text-center mb-4">Resumen de Compra</h2>
-        <table class="table table-striped table-bordered table-hover shadow-lg">
-            <thead class="thead-dark">
-                <tr>
-                    <th>Instrumento</th>
-                    <th>Fecha de Operación</th>
-                    <th>IGV (18%)</th>
-                    <th>Monto</th>
-                </tr>
-            </thead>
-            <tbody>
-                @if (list_operaciones != null)
-                {
+    @if (list_operaciones != null && list_operaciones.Any())
+    {
+        <div class="mt-5">
+            <h2 class="text-center mb-4">Resumen de Compra</h2>
+            <table class="table table-striped table-bordered table-hover shadow-lg">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Instrumento</th>
+                        <th>Fecha de Operación</th>
+                        <th>IGV (18%)</th>
+                        <th>Monto</th>
+                    </tr>
+                </thead>
+                <tbody>
                     @foreach (var operacion in list_operaciones)
                     {
                         foreach (var instrumento in operacion.Instrumentos)
@@ -84,14 +84,14 @@
                             </tr>
                         }
                     }
-                }
-            </tbody>
-        </table>
-        <div class="text-center mt-4">
-            <p><strong>Comisión:</strong> @list_operaciones?.LastOrDefault()?.Comision</p>
-            <p><strong>Total a Pagar:</strong> @list_operaciones?.LastOrDefault()?.Total</p>
+                </tbody>
+            </table>
+            <div class="text-center mt-4">
+                <p><strong>Comisión:</strong> @list_operaciones.LastOrDefault()?.Comision</p>
+                <p><strong>Total a Pagar:</strong> @list_operaciones.LastOrDefault()?.Total</p>
+            </div>
         </div>
-    </div>
+    }
 </div>
 
 <style>
