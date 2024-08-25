@@ -1,6 +1,128 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Sobre Nosotros";
 }
-<h1>@ViewData["Title"]</h1>
+<div class="about-us-container">
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>@ViewData["Title"]</h1>
+            <p class="subtitle">Revolucionando el mañana con cada inversión.</p>
+        </div>
+    </section>
 
-<p>Use this page to detail your site's privacy policy.</p>
+    <section class="mission-vision-values">
+        <div class="content-wrapper">
+            <div class="mission">
+                <h2>Nuestra Misión</h2>
+                <p>En Umbrella-Corp, nuestro propósito es empoderar a nuestros clientes a través de soluciones financieras sostenibles, impulsadas por la tecnología y la innovación.</p>
+            </div>
+            <div class="vision">
+                <h2>Nuestra Visión</h2>
+                <p>Ser pioneros en el desarrollo de servicios financieros disruptivos que transformen el panorama global.</p>
+            </div>
+            <div class="values">
+                <h2>Nuestros Valores</h2>
+                <ul>
+                    <li>Excelencia: Nos esforzamos por superar las expectativas en cada proyecto.</li>
+                    <li>Innovación: Lideramos el cambio con ideas frescas y soluciones tecnológicas.</li>
+                    <li>Colaboración: Trabajamos de la mano con nuestros clientes para asegurar su éxito.</li>
+                    <li>Responsabilidad: Invertimos con un enfoque ético y sostenible.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <h2>Conoce a Nuestro Equipo</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUFox4EVfo1SDNVQvt2bSyQDLnXgex5gOVQg&s" alt="CEO">
+                <h3>Sofía Gómez</h3>
+                <p>CEO & Fundadora</p>
+            </div>
+            <div class="team-member">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxmgKPa1jLakppO9_soxlQtwwfKd40LbHdig&s" alt="CFO">
+                <h3>Lucas Fernández</h3>
+                <p>Director Financiero</p>
+            </div>
+            <div class="team-member">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvn9_CbBdsVTwtsE27Om_gOGNlEBr_81pZ362owHcFDeZsrfwxiSCjHFTiXHnGdSGiXo8&usqp=CAU" alt="CTO">
+                <h3>Andrea Castillo</h3>
+                <p>Directora de Tecnología</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="history-section">
+        <h2>Nuestra Historia</h2>
+        <p>Desde su fundación en 2010, Umbrella-Corp ha redefinido las inversiones, construyendo un legado basado en la confianza, la innovación y la excelencia en los servicios financieros. Cada hito es un paso hacia un futuro más brillante.</p>
+    </section>
+
+</div>
+
+<style>
+    .about-us-container {
+        font-family: 'Arial', sans-serif;
+        color: #333;
+        line-height: 1.6;
+    }
+    .hero-section {
+        background: url("https://st2.depositphotos.com/3591429/6006/i/450/depositphotos_60069767-stock-photo-group-of-people-working-in.jpg");
+        background-size: cover;
+        padding: 80px 20px;
+        color: #ffffff;
+        text-align: center;
+    }
+    .hero-content h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
+    .subtitle {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+    .mission-vision-values {
+        background: #f5f5f5;
+        padding: 60px 20px;
+        margin-top: 60px;
+        text-align: center;
+    }
+    .mission-vision-values h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .content-wrapper {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .content-wrapper > div {
+        max-width: 30%;
+        margin-bottom: 20px;
+    }
+    .team-section {
+        padding: 60px 20px;
+        text-align: center;
+    }
+    .team-grid {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .team-member {
+        max-width: 30%;
+        margin-bottom: 20px;
+    }
+    .team-member img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+    .history-section {
+        background: #f5f5f5;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+</style>
